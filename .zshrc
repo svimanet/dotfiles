@@ -7,6 +7,11 @@
 # I want LS with colours!
 alias ls='ls --color=auto'
 
+# Alias for github SSH auth
+alias sshstart='eval `ssh-agent -s`'
+alias sshadd='ssh-add $(ls -d ~/.ssh/* | grep -v known_hosts)'
+alias gitauth='ssh -T git@github.com'
+
 # Prompt style
 autoload -Uz promptinit
 promptinit
