@@ -10,6 +10,10 @@ alias sshstart='eval `ssh-agent -s`'
 alias sshadd='ssh-add $(ls -d ~/.ssh/* | grep -v known_hosts)'
 alias gitauth='ssh -T git@github.com'
 
+# JottaCli Archive commands
+function sharefile() { jotta-cli archive "$1" --remote shared/"$1" --share --clipboard }
+function sharestream() { echo "$2" | jotta-cli archive -I --remote shared/"$1" --share --clipboard }
+
 # Prompt style
 autoload -Uz promptinit
 promptinit
