@@ -1,0 +1,10 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "obsidianCss": true,
+  "showLineNumber": true,
+  "vimMode": true,
+  "spellcheck": true,
+  "legacyEditor": false,
+  "livePreview": true
+}
