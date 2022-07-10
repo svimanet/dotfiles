@@ -1,20 +1,18 @@
-# Set up the prompt
 
-# Set env vars
-# ... hidden
-# export SOME_VAR=anything
-
-# I want LS with colours!
 alias ls='ls --color=auto'
+alias dc='docker-compose'
+
+# git and ssh
 alias sshstart='eval `ssh-agent -s`'
 alias sshadd='ssh-add $(ls -d ~/.ssh/* | grep -v known_hosts)'
 alias gitauth='ssh -T git@github.com'
+alias gitssh='sshstart && sshadd || gitauth'
 
 # JottaCli Archive commands
 function sharefile() { jotta-cli archive "$1" --remote shared/"$1" --share --clipboard }
 function sharestream() { echo "$2" | jotta-cli archive -I --remote shared/"$1" --share --clipboard }
 
-# Prompt style
+# Prompt
 autoload -Uz promptinit
 promptinit
 PROMPT="%K{green}%*%k %F{green}%n%f@%F{blue}%/%f"$'\n'"> "
