@@ -1,6 +1,6 @@
 
 alias ls='ls --color=auto'
-alias dc='docker-compose'
+alias dc='docker compose'
 
 # git and ssh
 alias sshstart='eval `ssh-agent -s`'
